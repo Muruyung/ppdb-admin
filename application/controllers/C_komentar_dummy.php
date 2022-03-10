@@ -16,7 +16,7 @@ class C_komentar extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		// $this->API = api_url();
-		$this->API = 'http://localhost/ppdb_man_1_cianjur/service/';
+		$this->API = api_url();
 		date_default_timezone_set('Asia/Jakarta');
 		// $this->API=decrypt_url($this->session->userdata('api'));
 
