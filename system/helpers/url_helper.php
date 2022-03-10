@@ -90,6 +90,27 @@ if ( ! function_exists('base_url'))
 
 // ------------------------------------------------------------------------
 
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('api_url'))
+{
+	/**
+	 * API URL
+	 *
+	 * Create a API URL based on your basepath.
+	 *
+	 * @param	string	$uri
+	 * @param	string	$protocol
+	 * @return	string
+	 */
+	function api_url()
+	{
+		return get_instance()->config->api_url();
+	}
+}
+
+// ------------------------------------------------------------------------
+
 if ( ! function_exists('current_url'))
 {
 	/**
