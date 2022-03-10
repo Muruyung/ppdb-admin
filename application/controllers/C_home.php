@@ -17,7 +17,7 @@ class C_home extends CI_Controller {
 		parent::__construct();
 		$this->API = api_url();
 		ini_set('max_execution_time', '0'); // for infinite time of execution
-		// $this->API = 'http://localhost/ppdb_man_1_cianjur/service/';
+		
 	}
 
 	// proses yang akan di buka saat pertama masuk ke controller
