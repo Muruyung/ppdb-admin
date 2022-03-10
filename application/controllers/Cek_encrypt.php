@@ -16,7 +16,7 @@ class Cek_encrypt extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->API = api_url();
-		// $this->API = 'http://localhost/ppdb_man_1_cianjur/service/';
+		
 	}
 
 	// proses yang akan di buka saat pertama masuk ke controller
