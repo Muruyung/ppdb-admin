@@ -111,6 +111,27 @@ if ( ! function_exists('api_url'))
 
 // ------------------------------------------------------------------------
 
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('client_url'))
+{
+	/**
+	 * CLIENT URL
+	 *
+	 * Create a CLIENT URL based on your basepath.
+	 *
+	 * @param	string	$uri
+	 * @param	string	$protocol
+	 * @return	string
+	 */
+	function client_url()
+	{
+		return get_instance()->config->client_url();
+	}
+}
+
+// ------------------------------------------------------------------------
+
 if ( ! function_exists('current_url'))
 {
 	/**

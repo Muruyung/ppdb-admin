@@ -35,7 +35,7 @@ class C_lihat_data extends CI_Controller {
 					$data['halaman'] = 'tabel_pendaftar1';
 					$data['login'] = 'false';
 					// $data['link'] = 'http://localhost/ppdb_man_1_cianjur/client/';
-					$data['link'] = 'https://ppdb.man1cianjur.com/';
+					$data['link'] = client_url();
 					$id_user = explode("=", decrypt_url($_GET['token']));
 					// Get data untuk dilihat
 					$data['siswa'] = json_decode($this->curl->simple_get($this->API.'get_siswa', array('where'=>['id'=>$id_user[1]]), array(CURLOPT_BUFFERSIZE => 10)), true)[0];
