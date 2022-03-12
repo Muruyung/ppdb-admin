@@ -326,6 +326,11 @@ class CI_Config {
 	{
 		return $this->slash_item('api_url');
 	}
+
+	public function client_url()
+	{
+		return $this->slash_item('client_url');
+	}
 	// -------------------------------------------------------------
 
 	/**
