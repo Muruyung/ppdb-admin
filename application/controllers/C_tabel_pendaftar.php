@@ -45,7 +45,7 @@ class C_tabel_pendaftar extends CI_Controller {
 					$tmp['last']		 = $data['siswa'][count($data['siswa'])-1]['id'];
 					$data['username']	 = encrypt_url($this->session->userdata('data_login')['username']);
 					// $data['link'] = 'http://localhost/ppdb_man_1_cianjur/client/';
-					$data['link'] = 'https://ppdb.man1cianjur.com/';
+					$data['link'] = client_url();
 					$data['pendaftaran'] = json_decode($this->curl->simple_get($this->API.'get_all_pendaftaran', $admin, array(CURLOPT_BUFFERSIZE => 10)), true);
 					$data['file']		 = json_decode($this->curl->simple_get($this->API.'get_all_file', $admin, array(CURLOPT_BUFFERSIZE => 10)), true);
 					// $data['link'] = 'https://ppdb-man-1-cianjur.com/';

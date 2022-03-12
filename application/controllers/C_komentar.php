@@ -316,7 +316,7 @@ class C_komentar extends CI_Controller {
 
 	function get_komentar(){
 		// $host="http://localhost/ppdb_man_1_cianjur/client/";
-		$host="https://ppdb.man1cianjur.com/";
+		$host= client_url();
 		if (isset($_GET['offset']) && isset($_GET['limit'])){
 			$offset = $_GET['offset'];
 			$limit = $_GET['limit'];

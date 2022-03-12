@@ -26,8 +26,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $config['base_url'] = 'http://localhost/ppdb_man_1_cianjur/admin';
 // $config['base_url'] = 'https://ppdb-admin.mansatucianjur.sch.id';
 
-$config['api_url'] = 'http://localhost/ppdb_man_1_cianjur/service/';
-// $config['api_url'] = 'https://ppdb-srv-01.mansatucianjur.sch.id/';
+// $config['api_url'] = 'http://localhost/ppdb_man_1_cianjur/service/';
+$config['api_url'] = 'https://ppdb-srv-01.mansatucianjur.sch.id/';
+
+// $config['client_url'] = 'http://localhost/ppdb_man_1_cianjur/client/';
+$config['client_url'] = 'https://ppdb.mansatucianjur.sch.id/';
 
 /*
 |--------------------------------------------------------------------------
