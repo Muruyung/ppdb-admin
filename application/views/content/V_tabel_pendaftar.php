@@ -225,7 +225,7 @@
         <!-- /.card -->
         <!-- Tabel username -->
         <?php
-        if ($username == encrypt_url('mansacjr') || $username == encrypt_url('muruyung')){
+        if ($username == encrypt_url('mansacjr') || $username == encrypt_url('yubisa')){
           ?>
           <div class="card">
             <div class="card-header">
