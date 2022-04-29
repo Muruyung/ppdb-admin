@@ -250,24 +250,40 @@ class C_tabel_pendaftar extends CI_Controller {
 					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $_siswa['no_hp']);
 					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $_siswa['kip']);
 					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $_siswa['email']);
-		
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "'".$ayah['no_kk']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "'".$ayah['kepala_klg']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "'".$ayah['nik']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['nama']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['tanggal_lahir']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['status_ortu']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['pend']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['kerja']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['penghasilan']);
-		
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "'".$ibu['nik']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ibu['nama']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ibu['tanggal_lahir']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ibu['status_ortu']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ibu['pend']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ibu['kerja']);
-					$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['no_hp']);
+					
+					if ($ayah != 401){
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "'".$ayah['no_kk']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "'".$ayah['kepala_klg']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "'".$ayah['nik']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['nama']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['tanggal_lahir']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['status_ortu']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['pend']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['kerja']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['penghasilan']);	
+					}else{
+						for($c=0;$c<9;$c++){
+							$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "-");
+						}
+					}
+					
+					if ($ibu != 401){
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "'".$ibu['nik']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ibu['nama']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ibu['tanggal_lahir']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ibu['status_ortu']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ibu['pend']);
+						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ibu['kerja']);
+						if ($ayah != 401){
+							$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $ayah['no_hp']);
+						}else{
+							$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "-");
+						}
+					}else{
+						for($c=0;$c<6;$c++){
+							$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, "-");
+						}
+					}
 		
 					if ($wali != 401){
 						$object->getActiveSheet()->setCellValueByColumnAndRow($column++, $row, $wali['nama']);
